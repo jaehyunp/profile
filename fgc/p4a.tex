@@ -1,0 +1,353 @@
+\documentclass{article}
+
+\usepackage[margin=0.8in]{geometry}
+\usepackage{graphicx,verbatim}
+\usepackage[export]{adjustbox}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage[table]{xcolor}
+\renewcommand*\rmdefault{iwona}
+\usepackage{tabu}
+\usepackage{tabularx}
+\renewcommand{\arraystretch}{1.4}
+
+\definecolor{cncol}{rgb}{0.5,0.8,1}
+\definecolor{facol}{rgb}{1,1,0.5}
+\definecolor{skcol}{rgb}{1,0.9,0.5}
+\definecolor{spcol}{rgb}{1,0.6,0.8}
+\definecolor{ascol}{rgb}{1,0.5,0.5}
+\definecolor{ikcol}{rgb}{0.9,0.7,1}
+
+\newcommand{\A}{\includegraphics[height=0.4cm,valign=m]{buttons/a.png}\,}
+\newcommand{\B}{\includegraphics[height=0.4cm,valign=m]{buttons/b.png}\,}
+\newcommand{\C}{\includegraphics[height=0.4cm,valign=m]{buttons/c.png}\,}
+\newcommand{\D}{\includegraphics[height=0.4cm,valign=m]{buttons/d.png}\,}
+\newcommand{\2}{\includegraphics[height=0.5cm,valign=m]{buttons/2.png}\,}
+\newcommand{\4}{\includegraphics[height=0.5cm,valign=m]{buttons/4.png}\,}
+\newcommand{\6}{\includegraphics[height=0.5cm,valign=m]{buttons/6.png}\,}
+\newcommand{\8}{\includegraphics[height=0.5cm,valign=m]{buttons/8.png}\,}
+\newcommand{\qcf}{\includegraphics[height=0.5cm,valign=m]{buttons/qcf.png}\,}
+\newcommand{\qcb}{\includegraphics[height=0.5cm,valign=m]{buttons/qcb.png}\,}
+
+\newcolumntype{"}{|[1.5pt]}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\thline}{\tabucline[1.5pt]{-}}
+
+\newcommand{\CN}{\multicolumn{2}{"l|}{\cellcolor{cncol}\textbf{Command Normal}} & \cellcolor{cncol}\textbf{P} & \cellcolor{cncol}\textbf{SB} \\ \hline}
+\newcommand{\FA}{\multicolumn{2}{"l|}{\cellcolor{facol}\textbf{Furious Action}} & \cellcolor{facol}\textbf{P} & \cellcolor{facol}\textbf{SB} \\ \hline}
+\newcommand{\SK}{\multicolumn{2}{"l|}{\cellcolor{skcol}\textbf{Skill}} & \cellcolor{skcol}\textbf{P} & \cellcolor{skcol}\textbf{SB} \\ \hline}
+\newcommand{\SP}{\multicolumn{2}{"l|}{\cellcolor{spcol}\textbf{SP Skill}} & \cellcolor{spcol}\textbf{P} & \cellcolor{spcol}\textbf{SB} \\ \hline}
+\newcommand{\AS}{\multicolumn{2}{"l|}{\cellcolor{ascol}\textbf{Awakened SP Skill}} & \cellcolor{ascol}\textbf{P} & \cellcolor{ascol}\textbf{SB} \\ \hline}
+\newcommand{\IK}{\multicolumn{2}{"l|}{\cellcolor{ikcol}\textbf{Instant Kill}} & \cellcolor{ikcol}\textbf{P} & \cellcolor{ikcol}\textbf{SB} \\ \hline}
+\newcommand{\OK}{\checkmark}
+\newcommand{\CHAR}[1]{\multicolumn{4}{"c"}{\large \textbullet \enspace \textbf{\textsc{#1}}\enspace\textbullet } \\ \thline}
+
+\newenvironment{character}[1]{\begin{tabu} to 0.9\textwidth {"X|X[1.5]|C{0.5cm}|C{0.5cm}"} \thline
+\multicolumn{4}{"c"}{\large \textbullet \enspace \textbf{\textsc{#1}}\enspace\textbullet } \\ \thline}
+{\end{tabu}}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\pagestyle{empty}
+\centering
+
+\vfill
+\begin{tabu} to 0.9\textwidth {"X|X[1.5]"} \thline
+\multicolumn{2}{"c"}{\large \textbullet \enspace \textbf{\textsc{System Mechanics}}\enspace\textbullet} \\ \thline
+Button Layout  & 
+\begin{tabular}{@{}c@{\hspace{0.5em}}c}
+\A & \C \\ \B & \D
+\end{tabular}
+\\ \hline
+Weak Attack   & \A \\ \hline
+Strong Attack & \B \\ \hline
+Weak Persona Attack   & \C \\ \hline
+Strong Persona Attack & \D \\ \hline
+(1) All-Out Attack  & \A\B \\ \hline
+All-Out Rush        & during (1), \A \,or \B \\ \hline
+All-Out Finish      & during (1), \C \,or \D \\ \hline
+Throw/Throw Escape  & \C\D \\ \hline
+Evasive Action      & \A\C \\ \hline
+Sweep               & \2+ \A\B \\ \hline
+Hop                 & \2+ \A\C \\ \hline
+Air Turn            & \A\C \,in mid-air \\ \hline
+Guard Cancel Attack & \6+ \A\B \,when blocking \\ \hline
+One More! Cancel    & \A\B\C \\ \hline
+Burst               & \A\C\D \\ \hline
+Instant Block       & \4 right before an attack hits \\ \hline
+Aerial/Ground Recovery & any button after being knocked into the air \\ \thline
+\end{tabu}
+
+\vfill
+\begin{character}{Yu Narukami}
+\CN
+Command Move & \2+ \A \,in mid-air && \\ \hline
+\FA
+Big Gamble & \B\D \,(ground or air) && \\ \hline
+\SK
+Raging Lion & \qcb+ \A \,or \B \,(ground or air) && \OK \\ \hline
+Swift Strike & \qcb+ \C \,or \D & \OK & \OK \\ \hline
+Zio & \qcf+ \C \,or \D & \OK & \OK \\ \hline
+\SP
+Ziodyne & \qcf\qcf+ \C \,or \D \,(ground or air) & \OK & \\ \hline
+\AS
+Cross Slash & \qcb\qcb+ \C \,or \D & \OK & \\ \hline
+\IK
+Myriad Truths & \2\2\2+ \C\D & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Yosuke Hanamura}
+\CN
+Command Move & \2+ \B \,in mid-air && \\ \hline
+\FA
+Dodge & \B\D \,when opponent is attacking && \\ \hline
+\SK
+Dash Spring & \qcf+ \A \,or \B && \OK \\ \hline
+Flying Kunai & \qcf or \qcb+ \C \,or \D \,in mid-air && \OK \\ \hline
+(1) Moonsault & \qcf or \qcb+ \A \,or \B \,in mid-air && \OK \\ \hline
+Crescent Slash & during (1), \A \,or \B && \\\hline
+Mirage Slash & \2+ \C \,or \D \,in mid-air &\OK&\OK \\\hline
+Tentarafoo & \qcf+ \C \,or \D &\OK&\OK \\\hline
+\SP
+Garudyne & \qcf\qcf+ \C \,or \D \,(ground or air) & \OK & \\ \hline
+\AS
+Sukukaja & \qcb\qcb+ \C \,or \D & \OK & \\ \hline
+\IK
+Brave Blade & \2\2\2+ \C\D & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Chie Satonaka}
+\FA
+High Counter & \B\D \,when opponent is attacking && \\ \hline
+High Counter (mid-air) & \B\D \,in mid-air && \\ \hline
+\SK
+(1) Rampage & \qcf+ \A \,or \B \,(ground or air) &&\OK \\\hline
+Skull Cracker & during (1), \qcf+ \A \,or \B &&\OK \\\hline
+Dragon Kick & \qcf+ \C \,or \D \,(ground or air) &\OK&\OK \\\hline
+Black Spot  & \qcb+ \C \,or \D &\OK&\OK \\\hline
+\SP
+God's Hand & \qcf\qcf+ \C \,or \D & \OK & \\ \hline
+Power Charge & \qcf\qcf+ \A \,or \B && \\ \hline
+\AS
+Agneyastra & \qcb\qcb+ \C \,or \D \,(ground or air) & \OK & \\ \hline
+\IK
+Galactic Punt & \2\2\2+ \C\D & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Yukiko Amagi}
+\FA
+Dia & \B\D & \OK & \\ \hline
+\SK
+Agi & \qcf+ \A \,or \B \,(ground or air) & \OK & \OK \\ \hline
+Maragi & \qcf+ \C \,or \D & \OK & \OK \\ \hline
+Fire Boost & \qcb+ \C & \OK & \\ \hline
+Fire Break & \qcb+ \D & \OK & \\ \hline
+Fire Amp & \qcb+ \C\D & \OK & \\ \hline
+\SP
+Agidyne & \qcf\qcf+ \C \,or \D & \OK & \\ \hline
+\AS
+Maragidyne & \qcb\qcb+ \C \,or \D & \OK & \\ \hline
+\IK
+Full Bloom & \2\2\2+ \C\D & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Aigis}
+\CN
+Command Move & \2+ \B \,in mid-air & & \\ \hline
+\FA
+Escape Change & \B\D \,(ground or air) & & \\ \hline
+\SK
+Mode Change & \2\2+ \A \,or \B & & \OK \\ \hline
+7th Gen Gatling Blast & \qcf+ \A \,or \B & & \OK \\ \hline
+7th Gen Radical Cannon & \qcb+ \A \,or \B & & \OK \\ \hline
+7th Gen Vulcan Cannon & \qcf+ \A \,or \B \,in mid-air & & \OK \\ \hline
+\multicolumn{2}{"l|}{\cellcolor{skcol}\textbf{Orgia Mode Skills}} & \cellcolor{skcol}\textbf{P} & \cellcolor{skcol}\textbf{SB} \\ \hline
+Orgia Boost & hold \6 (ground or air) && \\ \hline
+Back Boost & \4\4 (ground or air) && \\ \hline
+Hover Boost & hold \8 in mid-air && \\ \hline
+Megido Fire EX & \qcf+ \C \,or \D \,(ground or air) & \OK & \OK \\ \hline
+Pandora Missile Launcher & \qcb+ \C \,or \D \,(ground or air) & & \OK \\ \hline
+\SP
+Goddess Shield & \qcf\qcf+ \C \,or \D \,(ground or air) & \OK & \\ \hline
+\AS
+Heavenly Spear & \qcb\qcb+ \C \,or \D & \OK & \\ \hline
+\IK
+Heritage Liberator Palladion & \2\2\2+ \C\D \,in mid-air & \OK & \\ \thline
+\end{character}
+
+\vfill
+\begin{character}{Teddie}
+\FA
+Teddie Decoy & \B\D \,when opponent is attacking && \\ \hline
+\SK
+Bearscrew & \qcf+ \A \,or \B \,(ground or air) &&\OK \\\hline
+Puppeteddie & \qcb+ \A \,or \B \,(ground or air) &&\OK \\\hline
+(1) Teddivision & \qcf+ \C \,or \D &\OK&\OK \\\hline
+Teddie Warp & after (1), \qcf+ \C \,or \D &\OK&\OK \\\hline
+2D Teddie & \2\2+ \A \,or \B &&\OK \\\hline
+\SP
+Tomahawk & \qcf\qcf+ \C \,or \D &\OK& \\\hline
+Mid-Air Tomahawk & \qcf\qcf+ \C \,or \D \,in mid-air &\OK& \\\hline
+\AS
+Circus Bear & \qcb\qcb+ \C \,or \D & \OK & \\ \hline
+\IK
+Kamui Kablooey & \2\2\2+ \C\D & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Labrys}
+\FA
+5th Gen Axe Slash & \B\D & & \\ \hline
+\SK
+(1) Chain Knuckle   & \qcf+ \A \,or \B                 &     & \OK \\ \hline
+(2) Winch Dash      & after (1), \6                    &     &     \\ \hline
+Brake               & during (2), \4                   &     &     \\ \hline
+Extra Attack        & during (2), \A \,or \B           &     & \OK \\ \hline
+Guillotine Axe      & \qcb+ \A \,or \B                 &     & \OK \\ \hline
+Guillotine Aerial   & \qcb+ \A \,or \B \,in mid-air    &     & \OK \\ \hline
+Weaver's Art: Sword & \2\2+ \A \,or \B \,or \C \,or \D & \OK &     \\ \hline
+\SP
+Weaver's Art: Beast & \qcf\qcf+ \C \,or \D             & \OK &     \\ \hline
+\AS
+Weaver's Art: Breaking Wheel & \qcb\qcb+ \C \,or \D    & \OK &     \\ \hline
+Brutal Impact                & \qcb\qcb+ \A \,or \B    &     &     \\ \hline
+\IK
+Weaver's Art: Inquisition & \2\2\2+ \C\D               & \OK &     \\ \thline
+\end{character}
+
+\vfill
+\begin{character}{Naoto Shirogane}
+\CN
+Throw Follow-Up & \C \,after ground throw & \OK & \\ \hline
+\FA
+(1) Shield of Justice & \B\D \,when opponent is attacking & \OK & \\ \hline
+Counter Shot & after (1) successful, \A \,or \B \,or \C \,or \D & \OK & \\ \hline
+Counter Shot EX & after (1) successful, \6+ \A \,or \B \,or \C \,or \D & \OK & \\ \hline
+\SK
+(2) Double Fangs & \qcf+ \A \,or \B & & \OK \\ \hline
+(3) Aim          & \qcb+ \A \,or \B & & \OK \\ \hline
+Snipe (Front)       & after (2) or (3), \A & & \\ \hline
+Snipe (Ricochet)    & after (2) or (3), \B & & \\ \hline
+Snipe (Anti-Air)    & after (2) or (3), \C & & \\ \hline
+Cancel Aim          & after (2) or (3), \D \,(or \qcb+ \A) & & \\ \hline
+Hair-Trigger Megido & \qcb+ \C \,or \D \,(ground or air) & \OK & \OK \\ \hline
+\SP
+Anti-S SP Pistol $\alpha$ & \qcf\qcf+ \A \,(ground or air) & & \\ \hline
+Anti-S SP Pistol $\beta$  & \qcf\qcf+ \B \,(ground or air) & & \\ \hline
+Hamaon                  & \qcf\qcf+ \C & \OK & \\ \hline
+Mudoon                  & \qcf\qcf+ \D & \OK & \\ \hline
+\AS
+Raid & \qcb\qcb+ \A \,or \B, then when walking, \A \,or \B && \\\hline
+Critical Shot & \qcb\qcb+ \A \,or \B, then when walking, \C \,or \D && \\\hline
+\IK
+Judge of Hell & \2\2\2+ \C\D & \OK & \\ \thline
+\end{character}
+
+\vfill
+\begin{character}{Mitsuru Kirijo}
+\FA
+Getsu-ei & \B\D \,(ground or air) & & \\ \hline
+\SK
+Coup Droit & charge \4, then \6+ \A \,or \B & & \OK \\ \hline
+Bufula     & charge \2, then \8+ \C \,or \D & \OK & \OK \\ \hline
+\SP
+Myriad Arrows & \qcf\qcf+ \A \,or \B & & \\ \hline
+Bufudyne      & \qcf\qcf+ \C \,or \D & \OK & \\ \hline
+\AS
+Mabufudyne & \qcb\qcb+ \C \,or \D & \OK & \\ \hline
+\IK
+Niflheim & \2\2\2+ \C\D & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Shadow Labrys}
+\CN
+Knuckle Train & \C \,(ground or air) &\OK& \\\hline
+Terra's Eruption & \2+ \C \,(ground or air) &\OK& \\\hline
+Hammer Uppercut & \8+ \C \,(ground or air) &\OK& \\\hline
+Cliff of Creta & \D \,(ground or air) &\OK& \\\hline
+\FA
+5th Gen Axe Slash & \B\D && \\ \hline
+\SK
+Guillotine Axe & \qcb+ \A \,or \B &&\OK \\\hline
+Guillotine Aerial & \qcb+ \A \,or \B \,in mid-air &&\OK \\\hline
+Flame of Hades & \qcf+ \C \,or \D \,(ground or air) &\OK&\OK \\\hline
+Buffalo Hammer & \qcb+ \C \,or \D \,(ground or air) &\OK&\OK \\\hline
+Massive Slaughter & charge \4, then \6+ \C \,or \D \,(ground or air) &\OK&\OK \\\hline
+\SP
+Challenge Authority & \qcf\qcf+ \C \,or \D \,(ground or air) &\OK& \\\hline
+\AS
+Brutal Impact & \qcb\qcb+ \A \,or \B && \\\hline
+Titanomachia & \qcb\qcb+ \C \,or \D \,(ground or air) &\OK& \\\hline
+\IK
+(1) Labyrinthos Gate & \2\2\2+ \A\B & \OK & \\\hline
+Additional Attack & after (1), \2\2\2+ \A\B \,near opponent & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Kanji Tatsumi}
+\FA
+What A Pain! & \B\D &\OK& \\ \hline
+\SK
+Cruel Attack & \qcf+ \A \,or \B &&\OK \\\hline
+Added Cruel Attack & after certain attacks, \qcf+ \A \,or \B &&\OK \\\hline
+This'll Hurt! & \qcb+ \C \,or \D \,near opponent &\OK&\OK \\\hline
+Gotcha! & \qcf+ \C \,or \D &\OK&\OK \\\hline
+Bet Ya Can't Take This! & \qcb+ \A \,or \B \,in mid-air &&\OK \\\hline
+\SP
+Ass Whoopin', Tatsumi-Style & \qcf\qcf+ \A \,or \B && \\ \hline
+\AS
+Burn To A Crisp!! & \qcb\qcb+ \C \,or \D \,near opponent & \OK & \\ \hline
+\IK
+The Man Series: Brofist & \2\2\2+ \C\D \,near opponent & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Akihiko Sanada}
+\FA
+Double Uppercut & \B\D && \\ \hline
+\SK
+(1) Kill Rush & \qcf+ \A \,or \B &&\OK \\\hline
+(1) Dodge Strike & \qcb+ \A \,or \B \,when opponent is attacking &&\OK \\\hline
+(1) Assault Dive & \qcb+ \A \,or \B \,in mid-air &&\OK \\\hline
+Corkscrew & after (1), \6+ \A \,or \B &&\OK \\\hline
+Boomerang Hook & after (1), \4+ \A \,or \B &&\OK \\\hline
+Duck & \qcf+ \C \,or \D \,(after (1), \6+ \C \,or \D) &&\OK \\\hline
+Weave & \qcb+ \C \,or \D \,(after (1), \4+ \C \,or \D) &&\OK \\\hline
+\SP
+Cyclone Uppercut & \qcf\qcf+ \A \,or \B && \\\hline
+Thunder Fists & \qcf\qcf+ \C \,or \D &\OK& \\\hline
+\AS
+Maziodyne & \qcb\qcb+ \C \,or \D & \OK & \\ \hline
+\IK
+Earth Breaker & \2\2\2+ \C\D & \OK & \\\thline
+\end{character}
+
+\vfill
+\begin{character}{Elizabeth}
+\FA
+Shuffle Time & \B\D \,near opponent && \\ \hline
+\SK
+Maziodyne & \qcf+ \A \,or \B \,(ground or air) &\OK&\OK \\\hline
+Mabufudyne & \qcb+ \A \,or \B &\OK&\OK \\\hline
+Magarudyne & \qcf+ \C \,or \D \,(ground or air) &\OK&\OK \\\hline
+Maragidyne & \qcb+ \C \,or \D &\OK&\OK \\\hline
+\SP
+Mind Charge & \qcf\qcf+ \A \,or \B &&\\\hline
+Mahamaon & \qcf\qcf+ \C &\OK&\\\hline
+Mamudoon & \qcf\qcf+ \D &\OK&\\\hline
+\AS
+Diarahan & \qcb\qcb+ \A \,or \B & \OK & \\ \hline
+Ghastly Wail & \qcb\qcb+ \C \,or \D \,near opponent & \OK & \\ \hline
+\IK
+Megidolaon & \2\2\2+ \C\D \,when opponent is attacking & \OK & \\\thline
+\end{character}
+
+\vfill
+
+\end{document}

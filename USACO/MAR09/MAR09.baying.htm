@@ -1,0 +1,78 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<TITLE>USACO MAR09 baying 해설</TITLE> </HEAD><BODY bgcolor="#FFFFFF">
+<CENTER><IMG src="./../cow1.jpg" width="742" height="118"></CENTER>
+<H2>USACO MAR09 문제 &#39;baying&#39; 해설</H2>
+<H4>해설: 박재현</H4>
+<p>영문 해설로 <a href="http://ace.delos.com/TESTDATA/MAR09.baying.htm">돌아가기</a></p>
+
+<p>이 문제를 푸는 방법은 여러 가지가 있는데, 그 중 하나는 최소힙을 이용하여 
+S에 새로운 원소를 하나씩 추가시키는 방법입니다. 새 원소가 추가될 때마다 그 원소로부터 
+만들어질 수 있는 두 개의 새로운 원소를 힙에 넣어주면 S를 정렬된 상태로 유지하면서 
+O(N lg N)의 시간복잡도를 가지는 알고리즘을 디자인할 수 있습니다. 하지만 이 방법은 
+제한 시간 내에 모든 테스트 케이스를 처리하기에는 역부족입니다.</p>
+
+<p>좀 더 효율적인 알고리즘을 고안하기 위해서는 a/d의 비율이 항상 1보다 크다는 것을 
+염두에 둘 필요가 있습니다. 따라서 x가 증가함에 따라 함수 a*x/d+b의 값도 증가하게 됩니다. 
+이 성질을 이용하면 힙을 사용하지 않고도 S의 원소를 오름차순으로 추가시켜 나갈 수 있습니다. 
+두 개의 포인터를 이용해서 가장 마지막으로 고려한 원소들 x_1과 x_2를 가리키도록 한 뒤, 
+a_1*x_1/d_1+b_1의 값과 a_2*x_2/d_2+b_2의 값을 비교해서 더 작은 원소를 덧붙여 나가면 됩니다. 
+두 개의 수 중 작은 숫자가 차례로 배열 끝에 추가되도록 하는 이 방법은 머지 소트에도 쓰입니다. 
+위의 알고리즘은 O(N)의 시간복잡도를 가지고, S의 원소들을 저장하기 위한 배열 하나만을 제외하고는 
+다른 배열을 필요로 하지 않습니다.</p>
+
+<p>S에 중복된 원소가 나타나지 않도록 하는 것도 잊지 말아야 합니다.</p>
+
+<pre>
+//baying by Jaehyun Park
+
+#include&lt;stdio.h&gt;
+#define PROBNAME "baying"
+int N;
+long long a1, b1, d1;
+long long a2, b2, d2;
+long long S[4000001];
+int Ssize=1;
+FILE *ifp=fopen(PROBNAME".in", "r"), *ofp=fopen(PROBNAME".out", "w");
+void INPUT()
+{
+	fscanf(ifp, "%lld%d", &S[1], &N);
+	fscanf(ifp, "%lld%lld%lld", &a1, &b1, &d1);
+	fscanf(ifp, "%lld%lld%lld", &a2, &b2, &d2);
+}
+void PROCESS()
+{
+	int p1=1, p2=1;
+	long long next1=a1*S[1]/d1+b1, next2=a2*S[1]/d2+b2;
+	while(Ssize&lt;N)
+	{
+		if(next1&lt;next2)
+		{
+			if(S[Ssize]!=next1) S[++Ssize]=next1;
+			next1=a1*S[++p1]/d1+b1;
+		}
+		else
+		{
+			if(S[Ssize]!=next2) S[++Ssize]=next2;
+			next2=a2*S[++p2]/d2+b2;
+		}
+	}
+}
+void OUTPUT()
+{
+	fprintf(ofp, "%lld\n", S[N]);
+}
+void CLOSE_FILES()
+{
+	fclose(ifp); fclose(ofp);
+}
+int main()
+{
+	INPUT();
+	PROCESS();
+	OUTPUT();
+	CLOSE_FILES();
+	return 0;
+}
+</pre>
+
+</BODY></HTML>

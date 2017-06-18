@@ -1,0 +1,114 @@
+= Jaehyun Park
+
+~~~
+{}{img_left}{jaehyun.jpg}{}{}
+Jaehyun Park, Ph.D.\n
+[http://cs.stanford.edu/ Computer Science Department] \n
+[http://www.stanford.edu/ Stanford University]\n
+\n
+[resume.pdf Resume]\n
+Email: jpark \[at\] cs (dot) stanford (dot) edu
+~~~
+
+== Education
+- Ph.D., [http://cs.stanford.edu/ Computer Science], [http://www.stanford.edu/ Stanford University], 2012--2017
+-- Co-advised by [http://www.stanford.edu/~boyd/ Professor Stephen Boyd], and [http://geometry.stanford.edu/member/guibas/ Professor Leonidas Guibas].
+-- Dissertation: [https://purl.stanford.edu/ms669ky3373 Approximation techniques for mixed-integer quadratic problems]
+- B.S. with distinction, [http://cs.stanford.edu/ Computer Science], [http://www.stanford.edu/ Stanford University], 2008--2012
+- Supported by [http://www.ssscholarship.com/ Samsung Scholarship], 2008--2017
+
+== Teaching
+- [https://stanford.edu/~boyd/papers/cvx_short_course.html Convex Optimization Short Course] at [http://shanghaitech.edu.cn/ ShanghaiTech University], co-instructor, March 2016
+- [http://ee364a.stanford.edu EE 364a] (Convex Optimization I) course assistance, 2013--14 summer
+- [http://ee364b.stanford.edu EE 364b] (Convex Optimization II) course assistance, 2013--14 spring
+- EE 364a (Convex Optimization I) course assistance, 2013--14 winter
+- CS 161 (Design and Analysis of Algorithms) course assistance, 2012--13 spring
+- [http://cs97si.stanford.edu/ CS 97SI] (Introduction to Programming Contests) instructor, 2011--12 winter
+- [http://www.acmicpc-pacnw.org/ ACM-ICPC Pacific Northwest] judge, 2016
+- [http://cs.stanford.edu/group/acm/SLPC/ Stanford ACM-ICPC] coach and problem setter, 2010--2015
+-- ACM-ICPC related materials [https://github.com/jaehyunp/stanfordacm on GitHub].
+-- Subscribe to the [https://mailman.stanford.edu/mailman/listinfo/stanford-acm-icpc Stanford ACM-ICPC email list] to get notifications about future practice contests.
+- Korea Olympiad in Informatics (KOI) coach and problem setter, 2008, 2012
+- [http://www.ioi2013.org/ International Olympiad in Informatics] (IOI) student coach of the Korea team, 2013
+-- Korea team won 2 golds and 2 silvers, placing 3rd (unofficial country rank).
+- [http://www.usaco.org/ USA Computing Olympiad] (USACO) coach and problem setter, 2008--2011
+-- Some old USACO stuff can be found [USACO here].
+
+== Awards
+- [https://icpc.baylor.edu/ ACM International Collegiate Programming Contest] (ACM-ICPC)
+-- [https://icpc.baylor.edu/community/results-2010 World Finals 2010]: North America Champions (14th place)
+-- [https://icpc.baylor.edu/community/results-2009 World Finals 2009]: 20th place
+-- [http://www.acmicpc-pacnw.org/Standings/2009.htm Pacific Northwest Regional 2009]: 2nd place
+-- [http://www.acmicpc-pacnw.org/Standings/2008.htm Pacific Northwest Regional 2008]: 1st place
+- [http://math.scu.edu/putnam/ William Lowell Putnam Mathematical Competition]
+-- [http://kskedlaya.org/putnam-archive/putnam2010results.html 2010]: Honorable Mentioned Team (7th place)
+-- [http://kskedlaya.org/putnam-archive/putnam2009results.html 2009]: Honorable Mention (53rd place)
+- [http://ioinformatics.org/ International Olympiad in Informatics] (IOI)
+-- [http://ioinformatics.org/locations/ioi07/results.shtml 2007]: Silver Medal
+-- [http://ioinformatics.org/locations/ioi06/results.shtml 2006]: Gold Medal (2nd place worldwide)
+- Asia Pacific Informatics Olympiad (APIO)
+-- 2007: Silver (7th place)
+- Member of Association for Computing Machinery (ACM)
+- [http://engineering.stanford.edu/portals/student/terman-awards/2011-2012-terman-awards Frederick Emmons Terman Engineering Scholastic Award], 2012
+- [https://tbp.stanford.edu/ Stanford Tau Beta Pi Engineering Honors Society]
+
+== Research
+- Jaehyun Park, "Approximation techniques for mixed-integer quadratic problems", Ph.D. dissertation, Stanford University, 2017. ([https://purl.stanford.edu/ms669ky3373 external link])
+- Jaehyun Park and Stephen Boyd, "General Heuristics for Nonconvex Quadratically Constrained Quadratic Programming", arXiv preprint, 2017. ([https://stanford.edu/~boyd/papers/qcqp.html external link], [https://github.com/cvxgrp/qcqp +QCQP+ Python package repository])
+- Jaehyun Park and Stephen Boyd, "A Semidefinite Programming Method for Integer Convex Quadratic Minimization", /Optimization Letters/, 2017. ([https://stanford.edu/~boyd/papers/int_least_squares.html external link])
+- Jaehyun Park, "Sparsity-Preserving Difference of Positive Semidefinite Matrix Representation of Indefinite Matrices", arXiv preprint, 2016. ([diff_psd.pdf pdf])
+- Jaehyun Park and Stephen Boyd, "Concave Quadratic Cuts for Mixed-Integer Quadratic Problems", arXiv preprint, 2015. ([https://stanford.edu/~boyd/papers/int_quad_cuts.html external link])
+- Jaehyun Park and Maurizio Calo, "Symbolic Subdifferentiation in Python", Independent work (under the supervision of Professor Stephen Boyd), 2011. ([spy11.pdf pdf], [https://github.com/cvxgrp/subgradpy codes])
+- Jaehyun Park, "Recognizing Human Actions in Videos", [http://curis.stanford.edu/ Stanford CURIS] project (under the supervision of Professor Andrew Ng), 2010. ([video10.pdf slides])
+- Jaehyun Park and David Kamm, "Cortically Inspired Architectures for Action Recognition in Movie Clips", Independent work, 2010. ([cs379c10 pdf])
+- Michael Harris, David Kamm, Jaehyun Park, and Jeffrey Wang, "Unsupervised Learning of Invariances in Deep Networks", Independent work (under the supervision of Professor Andrew Ng), 2010. ([deep10.pdf slides])
+- Michael Harris, Jaehyun Park, and Jeffrey Wang, "Deep Networks on the GPU", Independent work (under the supervision of Professor Andrew Ng), 2010. ([gpu10.pdf pdf])
+- Jaehyun Park, "Clone Detection in a Software Using Graph Modeling", Independent work (under the supervision of Professor Byung-Ro Moon), 2006. ([clone06.pdf pdf in Korean])
+
+== Work
+- Research intern at Instagram, 2016 summer
+- Research intern at Microsoft Research, 2013 summer
+- Software engineer at imo.im, 2011 summer
+- Software engineer at Facebook, 2009 summer
+
+== Piano
+- Chopin, Nocturne in E-flat (May 2016): [https://youtu.be/PRkJp3ebhQU video]
+- Chopin, Nocturne in B (March 2016): [https://youtu.be/fNiMPfjq6tI video]
+- Liszt, Transcendental Etude 'Feux follets' (December 2015): [https://youtu.be/oNFFd9CEQKs video]
+- Gershwin-Grainger, 'Love Walked In,' with Chopin's nouvelles etude \#2 as a prelude (November 2015): [https://youtu.be/bSzbdj2ds_k video]
+- Gershwin, Rhapsody in Blue (first piano: Patrick Kim, June 2015): [https://youtu.be/3Zq0RjK31Wc video]
+- Schubert-Liszt, Ständchen (June 2015): [https://youtu.be/g0ByxgPJMFs video]
+- Chopin, Barcarolle in F sharp (June 2014): [http://youtu.be/tYofq1v0Edo video]
+- Kapustin, Concert Etude 'Reverie' (June 2014): [http://youtu.be/cg8eawES3EU video]
+- Kapustin, Concert Etude 'Intermezzo' (March 2014): [http://youtu.be/cbsgBRVY8Zc video]
+- Schumann-Liszt, Widmung (December 2013): [http://youtu.be/JJOcY54NwnI video]
+- Kapustin, Concert Etude 'Toccatina' (December 2013): [http://youtu.be/ilSics9h_94 video]
+- Levitzki, Waltz (November 2013): [http://youtu.be/1aEkdHlePqY video]
+- Kapustin, Sonata No. 2, Movement 1 (June 2013): [http://youtu.be/BfD530XrdnA video]
+- Kapustin, Variations (November 2012): [http://youtu.be/fiZg5cLZyes video]
+- Jaehyun's Senior Recital live recordings (May 2012)
+-- Liszt, Ballade No. 2 in B minor: [http://youtu.be/9EPClpi7ang video]
+-- Chopin, Ballade No. 4 in F minor: [http://youtu.be/9ICUxrM7bDE video]
+--- I won the Humanities & Sciences Undergraduate Prize in Music for my performance of Chopin's 4th Ballade.
+-- Kreisler-Rachmaninoff, Liebesfreud: [http://youtu.be/mC5HAnrHPgA video]
+-- Kreisler-Rachmaninoff, Liebesleid: [http://youtu.be/fJ97wj9P9gs video]
+-- Gershwin, Rhapsody in Blue: [http://youtu.be/3WG6C1mWeog video]
+-- Bolcom, Graceful Ghost Rag: [http://youtu.be/XufJenzarLI video]
+- Beethoven, Cello Sonata No. 3 in A major, Movement 1 (cello: John Pardon, February 2012): [http://youtu.be/MNFQKRaJ8RA video]
+- [https://musopen.org/music/performer/jaehyun-park/ Musopen performer profile]
+
+== Miscellaneous
+- [http://thenativesociety.com/nativeadmission/2015/8/13/jaehyun-park-phd-candidate-in-computer-science-at-stanford-u.html NativeAdVantage interview]
+- Jobsticks Interview [http://blog.naver.com/jobsticks/60181272773 Part 1], [http://blog.naver.com/jobsticks/60182725024 Part 2] (in Korean)
+- [http://youtu.be/tZRWUesgqFc PandoDaily interview]
+-- This video was part of a PandoDaily article "Top 5 Stanford CS Students You Should Know," posted on March 30th, 2012. The article is gone now, and only the video is remaining.
+#- [http://phenomlist.com/Stanford_Senior_CS_Rockstars/Jaehyun_Park PhenomList interview]
+- [http://projecteuler.net/ Project Euler]
+-- {{<img src="http://projecteuler.net/profile/jaehyunp.png" align="middle">}}
+- [http://www.poj.org/ Peking University Online Judge] Member (ID: [http://www.poj.org/userstatus?user_id=rouder rouder])
+-- I used to solve problems on this website for my IOI and ICPC training. It's outdated now, and I recommend [http://codeforces.com/ Codeforces] or [http://community.topcoder.com/tc topcoder] for people who want to improve their algorithmic problem solving skills.
+- Random codes I wrote
+-- [random/cropper.lua Simple VLC extension] for cropping videos using ffmpeg.
+-- [random/twitchvoddownloader.py Python script] for downloading Twitch.tv VODs. This needs ffmpeg to be in PATH, and the m3u8 package to be installed.
+#- I'm a big fan of 2D fighting games, especially the Street Fighter series.
+#- I began indoor rock climbing in September 2014. My current level is 5.12 (top rope) and V6+ (bouldering).
